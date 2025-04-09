@@ -2,10 +2,10 @@ local sysname = vim.uv.os_uname().sysname:lower()
 local build_command
 
 if sysname:find 'windows' then
-  build_command =  "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+  build_command = 'powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false'
 else
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-  build_command = "make"
+  build_command = 'make'
 end
 
 return {
